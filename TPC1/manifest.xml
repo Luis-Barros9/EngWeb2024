@@ -16,12 +16,11 @@
     <resumo>
         <p>Para este problema é fornecido um ficheiro zip com 3 pastas relativas às ruas, uma delas com informação em formato xml e as restantes de imagens a serem utilizadas.
         Com isso, temos de criar um script que faz parse dos dadoa e cria páginas em html para cada uma das ruas e um índice responsivo</p>
-        <p></p>
-        <p>Terceiro parágrafo com <url>link</url><texto>url embutido</texto></p>
-    </resumo>
     <resultados>
+        <resultado>O programa começa por iterar sobre todos os ficheiros xml, presentes na pasta validando assim os dados de acordo com o ficheiro xsd e caso seja inválido informa o utilizador, como não sei
+        se os resultados estar realmente errados, procedo normalmente. Dito isto, construo o html para cada ficheiro xml e vou guardando assim em lista a informação relativa ao nome de todas as ruas numa lista.
+        De seguida ordeno essa lista alfabeticamente e crio então o índice para todas as páginas html</resultado>
         <resultado>Como resultado da execução do progama, é criada uma pasta 'resultados' onde serão armazenados os ficheiros html. Dentro desta pastas encontramos um índice para todas as ruas, os ficheiros html
-        destas encontram-se dentro da pasta 'ruas'.<resultado>
-        <resultado>resultado 2</resultado>
+        destas encontram-se dentro da pasta 'ruas'.</resultado>
     </resultados>
 </doc>

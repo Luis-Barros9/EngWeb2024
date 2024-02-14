@@ -41,7 +41,7 @@ def clearParagraph(paragraph):
 
 
 
-def createLine(element,pathToFolder = None):
+def createLine(element,pathToFolder,index = 1):
     res =""
     if element.tag == "para":
 
@@ -49,40 +49,43 @@ def createLine(element,pathToFolder = None):
         
         res = f"    <p>\n   {x}\n</p>\n"
     elif element.tag == "figura":
-
+        #<div style='text-align: center;'><figure><img src='{image_path}' style='max-width: 70%;height: auto;' alt='{caption}'><figcaption style='font-size: 14px;'>Fig. {index} - {caption}</figcaption></figure>
         id = element.get("id")
         imagePath = f"../../{pathToFolder}/{element.find('imagem').get('path').strip()}"
         legenda = element.find("legenda").text
-        res= f"<img id='{id}' class ='w3-image' src='{imagePath}' alt='{legenda}'>"
-
+        res= f"<figure><img id='{id}' class ='w3-image' src='{imagePath}' alt='{legenda}'><figcaption style='text-align: center;'>Fig. {index} - {legenda}</figcaption></figure>"
+        index+=1
     elif element.tag == "lista-casas":
 
         #create html list with all the houses
         res = "<div><h2>Lista Casas</h2><ul>\n"
         for casa in element:
-            res += f"<li>\n\t{createLine(casa,pathToFolder)}\n</li>\n"
+            x,index = createLine(casa,pathToFolder,index= index)
+            res += f"<li>\n\t{x}\n</li>\n"
         res += "</ul></div>"
     elif element.tag == "casa":
         
         res = "<div>\n"
         for elem in element:
-            res += f"\t{createLine(elem,pathToFolder)}\n"
+            x,index = createLine(elem,pathToFolder,index= index)
+            res += f"\t{x}\n"
             
         res += "</div>\n"
 
     elif element.tag == "número":
-        return f"<h3> Casa número(s){element.text}</h3>"
+        res = f"<h3> Casa número(s){element.text}</h3>"
     
     elif element.tag == "enfiteuta":
-        return f"<h4> Enfietura: {element.text}</h4>"
+        res= f"<h4> Enfietura: {element.text}</h4>"
     
     elif element.tag == "desc":
         res = "<div>\n"
         for elem in element:
-            res += f"\t{createLine(elem,pathToFolder)}\n"
+            x,index = createLine(elem,pathToFolder,index=index)
+            res += f"\t{x}\n"
         res += "</div>\n"
         
-    return res
+    return res,index
 
 
 def criarhtml(root, pathFolder, resultsFolder="resultados/ruas"):
@@ -115,9 +118,12 @@ def criarhtml(root, pathFolder, resultsFolder="resultados/ruas"):
     '''
 
     corpo = root.find("corpo")
-
+    i= 1
     for para in corpo:
-        templateCidade += createLine(para, pathFolder)
+        res,index = createLine(para, pathFolder,index=i)
+        i = index
+        templateCidade += res
+
 
     templateCidade += f"\n</div>\n"
 
