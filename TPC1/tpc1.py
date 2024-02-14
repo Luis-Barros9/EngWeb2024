@@ -5,16 +5,17 @@ import os
 
 
 
-html='''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title> EngWeb2024</title>
-        <meta charset ="UTF-8">
-    </head>
-    <body>
-    '''
 
+html='''
+<!DOCTYPE html>
+<html>
+<head><title>EngWeb2024</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+'''
 
 def clearParagraph(paragraph):
     '''
@@ -52,7 +53,8 @@ def createLine(element,pathToFolder = None):
         id = element.get("id")
         imagePath = f"../../{pathToFolder}/{element.find('imagem').get('path').strip()}"
         legenda = element.find("legenda").text
-        res= f"<img id='{id}' src='{imagePath}' alt='{legenda}'>"
+        res= f"<img id='{id}' class ='w3-image' src='{imagePath}' alt='{legenda}'>"
+
     elif element.tag == "lista-casas":
 
         #create html list with all the houses
@@ -83,32 +85,45 @@ def createLine(element,pathToFolder = None):
     return res
 
 
-def criarhtml(root,pathFolder,resultsFolder = "resultados/ruas"):
-    #Função que cria o ficheiro html para cada rua e retorna o caminho para o mesmo
+def criarhtml(root, pathFolder, resultsFolder="resultados/ruas"):
+    """
+    Function that creates an HTML file for each street and returns the path to the file.
 
+    Args:
+        root (Element): The root element of the XML document.
+        pathFolder (str): The path to the data folder.
+        resultsFolder (str, optional): The folder where the HTML files will be saved. Defaults to "resultados/ruas".
+
+    """
     templateCidade = html
     # get path to CurrentFolder
 
-
     header = root.find("meta")
-    nome =header.find('nome').text
-    
-    templateCidade += f"<h1>{nome}</h1>"
+    nome = header.find('nome').text
+
+
+
+
+    templateCidade+= f'''
+        <div class="w3-card-4">
+            <header class="w3-container w3-teal">
+                <h3 style="display: flex; justify-content: center; align-items: center;">{nome}</h3>
+                <h6 style="display: flex; justify-content: flex-start; align-items: left";><a href='../mapa.html'>Voltar</a></h6>
+            </header>
+        </div>
+        <div class="w3-container">
+    '''
 
     corpo = root.find("corpo")
 
-    
     for para in corpo:
-        templateCidade += createLine(para,pathFolder)
-
+        templateCidade += createLine(para, pathFolder)
 
     templateCidade += f"\n</div>\n"
-    templateCidade+= f"<h6><a href='../mapa.html'>Voltar</h6>"
 
     templateCidade += '\n</body></html>'
 
-    
-    file = open(f"{resultsFolder}/{nome}.html","w",encoding ="utf-8")
+    file = open(f"{resultsFolder}/{nome}.html", "w", encoding="utf-8")
     file.write(templateCidade)
     file.close()
 
@@ -117,15 +132,6 @@ def criarhtml(root,pathFolder,resultsFolder = "resultados/ruas"):
 
 
 def main():
-    html='''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title> EngWeb2024</title>
-        <meta charset ="UTF-8">
-    </head>
-    <body>
-    '''
     folderPath = "../../aula1/MapaRuas-materialBase"
 
 
@@ -169,18 +175,19 @@ def main():
             criarhtml(root,textoPath,resultsStreets)
 
     
-    html += "<ul>"
+    html1 = html
+    html1 += "<ul>"
     
     for elem in sorted(ruas): 
-        html += f"<li><a href ='ruas/{elem}.html'> {elem}</li>"
+        html1 += f"<li><a href ='ruas/{elem}.html'> {elem}</li>"
 
-    html += "</ul>"
+    html1 += "</ul>"
 
-    html += "</body>"
-    html += "</html>"
+    html1 += "</body>"
+    html1 += "</html>"
 
     file = open(f"{results}/mapa.html","w",encoding ="utf-8")
-    file.write(html)
+    file.write(html1)
     file.close()
 
 

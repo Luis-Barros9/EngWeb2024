@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doc>
+    <meta>
+        <title>TPC1: Exemplo</title>
+        <date>2024-02-06</date>
+        <author>
+            <id>a100693</id>
+            <nome>Luís Barros </nome>
+        </author>
+        <uc>
+            <sigla>EW2024</sigla>
+            <nome>Engenharia Web<nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Para este problema é fornecido um ficheiro zip com 3 pastas relativas às ruas, uma delas com informação em formato xml e as restantes de imagens a serem utilizadas.
+        Com isso, temos de criar um script que faz parse dos dadoa e cria páginas em html para cada uma das ruas e um índice responsivo</p>
+        <p></p>
+        <p>Terceiro parágrafo com <url>link</url><texto>url embutido</texto></p>
+    </resumo>
+    <resultados>
+        <resultado>Como resultado da execução do progama, é criada uma pasta 'resultados' onde serão armazenados os ficheiros html. Dentro desta pastas encontramos um índice para todas as ruas, os ficheiros html
+        destas encontram-se dentro da pasta 'ruas'.<resultado>
+        <resultado>resultado 2</resultado>
+    </resultados>
+</doc>
