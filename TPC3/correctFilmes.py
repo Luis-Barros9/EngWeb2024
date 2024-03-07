@@ -23,8 +23,8 @@ def main(argv):
                     print(f"Error: {key} not found in {line}")
                     valid = False
                     continue
-            if valid:
-                filmes.append(data)
+            if valid and len(data["cast"]) > 0 and len(data["genres"]) > 0:
+                data["_id"] = data["_id"]["$oid"]
                 novosAtores = []
                 for ator in data["cast"]:
                     if ator not in atores.keys():
@@ -39,12 +39,13 @@ def main(argv):
                         idGenero += 1
                     novosGeneros.append(generos[genero])
                 data["genres"] = novosGeneros
+                filmes.append(data)
         except:
             print("Error: " + line)
 
     atoresJson = []
     for key,value in atores.items():
-        atoresJson.append({"id": value, "designacao": key})
+        atoresJson.append({"id": value, "nome": key})
 
     generosJson = []
     for key,value in generos.items():
