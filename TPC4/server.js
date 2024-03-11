@@ -198,7 +198,7 @@ var alunosServer = http.createServer((req, res) => {
                 }
             
                 // GET /alunos/delete/:id --------------------------------------------------------------------
-                else if ((/\/compositor\/delete\/C[0-9]+$/i).test(req.url)){
+                else if ((/\/compositores\/delete\/C[0-9]+$/i).test(req.url)){
                     idCompositor = req.url.split("/")[3]
                     axios.delete(`${link}/alunos/` + idCompositor)
                         .then(response => {

@@ -5,7 +5,7 @@
       "nome": "Alessandro Marcellos",
       "dataNasc": "1673-02-01",
       "dataObito": "1747-06-19",
-      "periodo": "p2",
+      "periodo": "p1",
       "bio": "AAA.Alessandro Ignazio Marcello (Veneza, 1 de Fevereiro de 1673 –Veneza, 19 de Junho de 1747) foi um nobre e diletante, que se interessava pela         arte, tendo sido poeta, filósofo e notável músico italiano."
     },
     {
@@ -1364,7 +1364,7 @@
     },
     {
       "id": "p394",
-      "nome": "Gótico"
+      "nome": "Gótic"
     }
   ]
 }
