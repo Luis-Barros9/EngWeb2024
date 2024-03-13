@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h2 Compositor Form
+        form.w3-container(method="POST")
+            fieldset
+                legend Metadata
+                label Id
+                input.w3-input.w3-round(type="text" name="id" value=periodo.id required readonly)
+                label Nome
+                input.w3-input.w3-round(type="text" name="nome" value=periodo.nome required)
+            button.w3-btn.w3-teal.w3-mb-2(type="submit") Edit
+
+        footer.w3-container.w3-teal.w3-center
+            address 
+                span Gerado por galuno::RPCW2022 em #{date} - [
+                a(href="/periodos") Voltar
+                span ]

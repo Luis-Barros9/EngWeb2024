@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h3.w3-left.w3-margin-left.w3-allerta.w3-button.w3-white.w3-round-large
+                a(href="http://localhost:3050/periodos") Períodos
+                h1.w3-center Lista de Compositores
+                a.w3-btn.w3-round.w3-grey(href="/compositores/registo") +
+                    
+        .w3-container
+            table.w3-table-all
+                tr
+                    th Id
+                    th Nome
+                    th Periodo
+                        
+                each compositor in compositores
+                    tr
+                        td #{compositor.id}
+                        td
+                            a(href="/compositores/" + compositor.id) #{compositor.nome}  
+                        td
+                            a(href="/periodos/" + compositor.periodo) #{listaPeriodos[compositor.periodo]}                       
+                        td
+                            span
+                            a.w3.w3-btn.w3-round.w3-blue(href="/compositores/edit/" + compositor.id) Edit
+                            span
+                            span
+                            a.w3.w3-btn.w3-round.w3-red(href="/compositores/delete/" + compositor.id) Delete
+                            span
+        footer.w3-container.w3-teal.w3-center
+            address Gerado por galuno::RPCW2022 em #{date}
+                
+            
+        

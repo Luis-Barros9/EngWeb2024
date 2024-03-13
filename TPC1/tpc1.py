@@ -117,6 +117,7 @@ def criarhtml(root, pathFolder, resultsFolder="resultados/ruas"):
         <div class="w3-container">
     '''
 
+
     corpo = root.find("corpo")
     i= 1
     for para in corpo:

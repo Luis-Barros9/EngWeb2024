@@ -1,0 +1,35 @@
+extends layout 
+
+block content
+    .w3-card-4  
+        header.w3-container.w3-teal  
+            h1 #{periodo.nome}
+        
+        .w3-container  
+        h1 Compositores
+        table.w3-table-all  
+            tr 
+                th Id
+                th Nome
+        
+            each comp in listaCompositores
+                tr 
+                    td #{comp.id}
+                    td 
+                        a(href="/compositores/" +comp.id) #{comp.nome}
+                    td
+                        span
+                        a.w3.w3-btn.w3-round.w3-blue(href="/compositores/edit/" + comp.id) Edit
+                        span
+                        span
+                        a.w3.w3-btn.w3-round.w3-red(href="/compositores/delete/" + comp.id) Delete
+                        span
+                    
+        footer.w3-container.w3-teal.w3-center
+            address 
+                span Gerado por galuno::RPCW2022 em #{date} - [
+                a(href="/periodos") Voltar
+                span ]
+                   
+            
+

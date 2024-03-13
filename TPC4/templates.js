@@ -132,12 +132,12 @@ exports.periodoFormPage = function(d){
             <meta charset="UTF-8"/>
             <link rel="icon" href="favicon.png"/>
             <link rel="stylesheet" href="w3.css"/>
-            <title>Compositor Form</title>
+            <title>Period Form</title>
         </head>
         <body>
             <div class="w3-card-4">
                 <header class="w3-container w3-teal">
-                    <h2>Compositor Form</h2>
+                    <h2>Period Form</h2>
                 </header>
             
                 <form class="w3-container" method="POST">
@@ -241,9 +241,9 @@ exports.compositorFormPage = function(listaPeriodos,d){
     pagHTML += 
     `                   </select>
                     </fieldset>
+                    <fieldset>
                         <label>Bio</label>
                         <input class="w3-input w3-round" type="text" name="bio" required/>
-                    <fieldser>
                     </fieldset>
                     <br/>
                     <button class="w3-btn w3-teal w3-mb-2" type="submit">Register</button>
@@ -330,7 +330,7 @@ exports.compositorPage = function(compositor, nomePeriodo, d ){
     <body>
         <div class="w3-card-4">
             <header class="w3-container w3-teal">
-                <h1>Aluno ${compositor.id}</h1>
+                <h1>Compositor ${compositor.id}</h1>
             </header>
 
             <div class="w3-container">
@@ -342,7 +342,7 @@ exports.compositorPage = function(compositor, nomePeriodo, d ){
                 </ul>
             </div>
             <div class="w3-container w3-margin-8">
-                <ul class="w3-ul">
+                <h2>Biografia</h2>
                 <p>${compositor.bio}</p>
             </div>
             `

@@ -1,20 +1,12 @@
 {
   "Compositores": [
     {
-      "id": "C26",
-      "nome": "Alessandro Marcellos",
-      "dataNasc": "1673-02-01",
-      "dataObito": "1747-06-19",
-      "periodo": "p1",
-      "bio": "AAA.Alessandro Ignazio Marcello (Veneza, 1 de Fevereiro de 1673 –Veneza, 19 de Junho de 1747) foi um nobre e diletante, que se interessava pela         arte, tendo sido poeta, filósofo e notável músico italiano."
-    },
-    {
       "id": "C48",
-      "nome": "Alessandro Scarlatti",
-      "bio": "Alessandro Scarlatti (Palermo, 2 de maio de 1660 — Nápoles, 24 de outubro de 1725), cujo nome verdadeiro era Pietro Alessandro Gaspari, foi\n         um compositor italiano de grande importância para a música lírica do período barroco. Seu trabalho foi fundamental para o desenvolvimento da\n         ópera séria e da ópera bufa (ópera cômica) do seu tempo. Ele é considerado o pai da escola napolitana de ópera, a qual contou, mais tarde,\n         com membros como Leonardo Leo, Leonardo Vinci, Giovanni Pergolesi e Johann Adolfo Hasse, entre outros.Dentre as obras de sucesso de Scarlatti\n         merecem destaque as óperas Carlo, Re d'Allemagna (1716), Telemaco (1718) e La Griselda (1721). Além das óperas, Alessandro Scarlatti também\n         ficou famoso por suas cantatas de câmara. Foi pai de dois outros compositores, Domenico Scarlatti (1785-1757) e Pietro Filippo Scarlatti\n         (1679-1750), e irmão mais velho de Francesco Scarlatti (1666-1741), também compositor, ainda que de menor expressão em comparação com\n         Alessandro e Domenico.As óperas de Alessandro Scarlatti são dotadas de alto nível musical e influenciaram compositores dos mais variados\n         países. Do ponto de vista da ação dramática, porém, ficam a dever para as composições de autores que o sucederam, como Händel, Hasse e\n         Vivaldi. As aberturas das óperas de Alessandro Scarlatti, chamadas sinfonias, consistiam geralmente de três movimentos: rápido, lento e\n         rápido. Essa forma se tornou de grande importância na criação posterior da sinfonia clássica para orquestra.Alessandro Scarlatti foi um\n         compositor de extraordinário talento criativo. Sua obra compreende nada menos que 115 óperas, 150 oratórios e mais de 500 cantatas, além de\n         composições instrumentais. A música de Scarlatti forma um importante elo entre a música vocal do início do barroco italiano do século XVII,\n         centrada em Florença, Veneza e Roma, e a escola clássica do século XVIII, que culmina em Haydn (1732-1809) e Mozart (1756-1791).",
+      "nome": "Alessandro Scarlattis",
       "dataNasc": "1660-05-02",
       "dataObito": "1725-10-22",
-      "periodo": "p1"
+      "periodo": "p2",
+      "bio": "Alessandro Scarlatti (Palermo, 2 de maio de 1660 — Nápoles, 24 de outubro de 1725), cujo nome verdadeiro era Pietro Alessandro Gaspari, foi         um compositor italiano de grande importância para a música lírica do período barroco. Seu trabalho foi fundamental para o desenvolvimento da         ópera séria e da ópera bufa (ópera cômica) do seu tempo. Ele é considerado o pai da escola napolitana de ópera, a qual contou, mais tarde,         com membros como Leonardo Leo, Leonardo Vinci, Giovanni Pergolesi e Johann Adolfo Hasse, entre outros.Dentre as obras de sucesso de Scarlatti         merecem destaque as óperas Carlo, Re d'Allemagna (1716), Telemaco (1718) e La Griselda (1721). Além das óperas, Alessandro Scarlatti também         ficou famoso por suas cantatas de câmara. Foi pai de dois outros compositores, Domenico Scarlatti (1785-1757) e Pietro Filippo Scarlatti         (1679-1750), e irmão mais velho de Francesco Scarlatti (1666-1741), também compositor, ainda que de menor expressão em comparação com         Alessandro e Domenico.As óperas de Alessandro Scarlatti são dotadas de alto nível musical e influenciaram compositores dos mais variados         países. Do ponto de vista da ação dramática, porém, ficam a dever para as composições de autores que o sucederam, como Händel, Hasse e         Vivaldi. As aberturas das óperas de Alessandro Scarlatti, chamadas sinfonias, consistiam geralmente de três movimentos: rápido, lento e         rápido. Essa forma se tornou de grande importância na criação posterior da sinfonia clássica para orquestra.Alessandro Scarlatti foi um         compositor de extraordinário talento criativo. Sua obra compreende nada menos que 115 óperas, 150 oratórios e mais de 500 cantatas, além de         composições instrumentais. A música de Scarlatti forma um importante elo entre a música vocal do início do barroco italiano do século XVII,         centrada em Florença, Veneza e Roma, e a escola clássica do século XVIII, que culmina em Haydn (1732-1809) e Mozart (1756-1791)."
     },
     {
       "id": "C206",
@@ -1345,26 +1337,34 @@
       "periodo": "p1"
     },
     {
-      "id": "C1",
-      "nome": "Luís Vitor Lima Barros",
-      "dataNasc": "2003-12-19",
-      "dataObito": "2023-09-03",
-      "periodo": "p394",
-      "bio": "Sou o Brabo"
+      "id": "p3",
+      "nome": "Romantismo"
+    },
+    {
+      "id": "p3",
+      "nome": "Romantismo"
+    },
+    {
+      "id": "p5",
+      "nome": "Joao"
+    },
+    {
+      "id": "p4",
+      "nome": "Romantismo"
     }
   ],
   "Periodos": [
     {
       "id": "p1",
-      "nome": "Barrocos"
+      "nome": "Barroco"
     },
     {
       "id": "p2",
       "nome": "Renascimento"
     },
     {
-      "id": "p394",
-      "nome": "Gótic"
+      "id": "p9",
+      "nome": "Gótico"
     }
   ]
 }
