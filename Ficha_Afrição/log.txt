@@ -1,0 +1,5 @@
+docker run -d -c 27017:27017 --name fichaAfricao mongo
+docker cp dataset.json fichaAfricao:/tmp
+docker exec -it fichaAfricao bash 
+mongoimport -d pessoas1 -c pessoas1 /tmp/dataset.json --jsonArray
+npx express-generator 
