@@ -13,6 +13,23 @@ module.exports.findById = id => {
         .exec()
 }
 
+module.exports.getModalidades = () => {
+    return Pessoa.aggregate([
+        {$project: {_id:0, desportos: 1}},
+        {$unwind: "$desportos"},
+        {$group: {_id:null, uniqueDesportos: {$addToSet: "$desportos"}}},
+        {$unwind: "$uniqueDesportos"},
+        {$sort: {uniqueDesportos: 1}},
+        {$group: {_id:null, desportos: {$push: "$uniqueDesportos"}}},
+        {$project: {_id:0, desportos: 1}}
+    ]).exec()
+}
+
+module.exports.getPessoasModalidade = modalidade => {
+    return Pessoa.
+        find({desportos: {$in: [modalidade]}})
+        .exec()
+}
 
 
 module.exports.insert = pessoa => {
