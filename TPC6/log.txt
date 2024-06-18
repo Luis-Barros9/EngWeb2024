@@ -1,0 +1,8 @@
+docker run -d -p 27017:27017 --name tpc6 mongo
+docker cp compositores2.json tpc6:/tmp
+docker exec -it tpc6 bash 
+mongoimport -d musica -c musica /tmp/compositores2.json 
+exit
+docker exec -it tpc6 mongosh
+use musica
+db.musica.find().pretty()
